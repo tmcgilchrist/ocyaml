@@ -1,0 +1,10 @@
+### Starting build.
+# Target: version_string.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:version_string.ml, ocaml, ocamldep, package(bin_prot.syntax), package(core), package(ctypes.foreign), package(sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax), quiet, short_paths, syntax(camlp4o), thread }
+ocamlfind ocamldep -syntax camlp4o -package ctypes.foreign -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core -modules version_string.ml > version_string.ml.depends # cached
+# Target: version_string.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:version_string.cmo, file:version_string.ml, implem, ocaml, package(bin_prot.syntax), package(core), package(ctypes.foreign), package(sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax), quiet, short_paths, syntax(camlp4o), thread }
+ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -annot -bin-annot -short-paths -thread -syntax camlp4o -package ctypes.foreign -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core -o version_string.cmo version_string.ml
++ ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -annot -bin-annot -short-paths -thread -syntax camlp4o -package ctypes.foreign -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core -o version_string.cmo version_string.ml
+File "version_string.ml", line 2, characters 0-11:
+Error: Unbound module Ocyaml
+Command exited with code 2.
+# Compilation unsuccessful.

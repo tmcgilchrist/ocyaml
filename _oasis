@@ -1,0 +1,30 @@
+OASISFormat: 0.4
+Name:        ocyaml
+Version:     0.0.1
+Synopsis:    Yaml parsing powered by libyaml
+Authors:     Tim McGilchrist
+License:     LGPL-2.1 with OCaml linking exception
+Homepage:    https://github.com/tmcgilchrist/ocyaml
+BuildTools: ocamlbuild
+Plugins: META (0.4), DevFiles (0.4)
+
+Library ocyaml
+  Path:       lib
+  Modules: Ocyaml
+  BuildDepends: ctypes.foreign
+  CCLib: -lyaml
+
+Executable version_string
+  Path: lib_test
+  MainIs: version_string.ml
+  Install: false
+  CompiledObject: best
+  BuildDepends: core, ctypes.foreign, ocyaml
+
+Document ocyaml
+  Title:                API reference for ocyaml
+  Type:                 ocamlbuild (0.1.0)
+  InstallDir:           $htmldir/ocyaml
+  BuildTools+:          ocamldoc
+  XOCamlbuildPath:      lib
+  XOCamlbuildLibraries: ocyaml

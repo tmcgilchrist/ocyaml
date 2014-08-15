@@ -1,0 +1,9 @@
+open Ctypes
+open Foreign
+
+(*
+corebuild -pkg ctypes.foreign -lflags -cclib,-lyaml version_string.native 
+ *)
+
+let get_version =
+  foreign "yaml_get_version_string" (void @-> returning string)
